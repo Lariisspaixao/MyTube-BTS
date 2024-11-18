@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Senha / Recuperar Senha</title>
+    <link rel="icon" href="img/bts-sem-fundo.png">
+    <link rel="stylesheet" href="estilo/estilologin.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="img/bts-logo-sem-fundo.png" alt="logo do grupo BTS" width="70px">
+        </a>
+    </header>
+    <main>
+        <section id="passwordRecoverySection">
+            <h1>Alterar Senha</h1>
+            <form id="passwordRecoveryForm" onsubmit="event.preventDefault(); handlePasswordChange();">
+                <label for="id">ID do Usuário:</label>
+                <input type="text" id="id" placeholder="Digite seu ID de usuário" required>
+                
+                <label for="newPassword">Nova Senha:</label>
+                <input type="password" id="newPassword" placeholder="Digite sua nova senha" required>
+                
+                <label for="confirmPassword">Confirmar Nova Senha:</label>
+                <input type="password" id="confirmPassword" placeholder="Confirme sua nova senha" required>
+                
+                <button type="submit">Alterar Senha</button>
+            </form>
+            <p>Se lembrou da senha? <a href="login.html">Faça login aqui</a>.</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 MyTube. Todos os direitos reservados.</p>
+    </footer>
+    <script src="javascript/logins.js"></script>
+</body>
+</html>

@@ -1,17 +1,19 @@
-// Função para carregar os usuários do localStorage
+// Função para carregar os usuários do localStorage 
 function loadUsers() {
     const users = localStorage.getItem("validUsers");
     if (users) {
         return JSON.parse(users); // Converte a string em array
     } else {
         // Se não houver nenhum usuário salvo, cria um array inicial
-        return [
+        const defaultUsers = [
             { username: "allan", password: "1234" },
             { username: "kaue", password: "1234" },
             { username: "larissa", password: "1234" },
             { username: "matheus", password: "1234" },
             { username: "yasmin", password: "1234" }
         ];
+        saveUsers(defaultUsers);
+        return defaultUsers;
     }
 }
 
@@ -76,5 +78,40 @@ function registerUser() {
     console.log(validUsers); // Apenas para teste (pode ser removido depois)
 
     // Redirecionar para a página de login após o registro
+    window.location.href = "login.html";
+}
+
+// Função para alterar a senha
+function handlePasswordChange() {
+    const id = document.getElementById('id').value.trim();
+    const newPassword = document.getElementById('newPassword').value.trim();
+    const confirmPassword = document.getElementById('confirmPassword').value.trim();
+
+    if (!id || !newPassword || !confirmPassword) {
+        alert('Por favor, preencha todos os campos.');
+        return;
+    }
+
+    if (newPassword !== confirmPassword) {
+        alert('As senhas não coincidem. Por favor, tente novamente.');
+        return;
+    }
+
+    const validUsers = loadUsers(); // Carrega os usuários registrados
+    const userIndex = validUsers.findIndex(user => user.username === id);
+
+    if (userIndex === -1) {
+        alert('Usuário não encontrado. Por favor, verifique o ID informado.');
+        return;
+    }
+
+    // Atualiza a senha do usuário
+    validUsers[userIndex].password = newPassword;
+    saveUsers(validUsers);
+
+    alert('Senha alterada com sucesso!');
+    console.log(validUsers); // Apenas para testes (pode ser removido depois)
+
+    // Redirecionar para a página de login após alterar a senha
     window.location.href = "login.html";
 }
