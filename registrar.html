@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar-se</title>
+    <link rel="icon" href="img/bts-sem-fundo.png">
+    <link rel="stylesheet" href="estilo/estilologin.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="img/bts-logo-sem-fundo.png" alt="logo do grupo BTS" width="70px">
+        </a>
+    </header>
+    <main>
+        <section id="registerSection">
+            <h1>Registrar</h1>
+            <form id="registerForm" onsubmit="event.preventDefault(); registerUser();">
+                <label for="id">ID do Usuário:</label>
+                <input type="text" id="id" placeholder="Digite o ID do usuário" required>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" placeholder="Digite sua senha" required>
+
+                <button type="submit">Registrar</button>
+            </form>
+            <p>Já tem uma conta? <a href="login.html">Faça login aqui</a>.</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 MyTube. Todos os direitos reservados.</p>
+    </footer>
+    <script src="javascript/logins.js"></script>
+</body>
+</html>

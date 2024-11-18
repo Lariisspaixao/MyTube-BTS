@@ -1,0 +1,139 @@
+/* Estilos gerais */ 
+body { 
+    font-family: Arial, sans-serif;
+    background-color: #e070ed;
+    margin: 0;
+    display: flex; 
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #853d8d;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+header p {
+    color: white;
+    margin-right: 10px;
+}
+
+header img {
+    height: 70px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+button { 
+    border-radius: 7px;
+    background-color: #853d8d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover { 
+    background-color: #b16bb8; /* Cor do botão ao passar o mouse */
+}
+
+a {
+    color: inherit; /* Usa a cor do botão (herdada do botão) */
+    text-decoration: none;
+}
+
+main { 
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 150px; /* Margens para o lado esquerdo e direito */
+    flex: 1;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Estilo para o título acima dos containers */
+.titulo-centralizado {
+    color: white;
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-size: 24px; /* Tamanho do texto */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+.container1 { 
+    flex: 3; 
+    padding: 20px; 
+    border: 1px solid #ccc; 
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video_grande {
+    width: 560px; /* Tamanho fixo do vídeo grande */
+    height: 315px; /* Tamanho fixo do vídeo grande */
+    background-color: rgb(141, 104, 175);
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.container2 { 
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.videos_pequenos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaço entre os vídeos */
+}
+
+.video_pequeno {
+    width: 100%;
+    max-width: 300px; /* Limita a largura máxima dos vídeos pequenos */
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #853d8d;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+h6 {
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+}

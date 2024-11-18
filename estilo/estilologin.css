@@ -1,0 +1,128 @@
+/* Configuração geral do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e070ed;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #853d8d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+header img {
+    height: 70px;
+}
+
+/* Conteúdo principal */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Seção de formulários (Login/Registro) */
+section {
+    background-color: #853d8d;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+section h1 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    color: white;
+    margin-bottom: 5px;
+    font-size: 16px;
+    text-align: left;
+    width: 100%;
+    max-width: 300px;
+}
+
+form input {
+    width: 100%;
+    max-width: 300px; /* Largura fixa máxima */
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box; /* Garante que padding não afete o tamanho total */
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%; /* Mesma largura */
+    max-width: 300px; /* Tamanho máximo fixo */
+}
+
+button {
+    border-radius: 7px;
+    background-color: #853d8d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 300px;
+}
+
+button:hover {
+    background-color: #b16bb8;
+}
+
+/* Links */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    color: white;
+}
+/* Rodapé */
+footer {
+    background-color: #853d8d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+footer p {
+    color: white;
+    font-size: 14px;
+    margin: 0;
+}
